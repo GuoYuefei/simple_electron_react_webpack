@@ -1,0 +1,20 @@
+{
+    "name": "demo",
+    "productName": "demo-electron",
+    "version": "0.0.1",
+    "description": "react webpack electron",
+    "private": true,
+    "main": "dist/main/main.js",
+    "scripts": {
+      
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+    
+    },
+    "dependencies": {
+
+    }
+  }
+  
