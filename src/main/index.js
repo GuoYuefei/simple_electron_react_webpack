@@ -14,6 +14,7 @@ function createWindow() {
 
     // 加载文件
     if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
         console.log(process.env.NODE_ENV);
         win.loadURL(DEV_SERVER);
     } else {
