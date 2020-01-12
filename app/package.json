@@ -8,7 +8,11 @@
     "scripts": {
       
     },
-    "author": "",
+    "author": {
+      "name": "GuoYuefei",
+      "email": "guoyuefei@protonmail.com",
+      "url": "https://github.com/GuoYuefei"
+    },
     "license": "MIT",
     "devDependencies": {
     

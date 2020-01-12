@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 
+const DEV_SERVER = 'http://localhost:5432';
+
 function createWindow() {
     // 创建浏览器窗口
     let win = new BrowserWindow({
@@ -10,8 +12,14 @@ function createWindow() {
         }
     });
 
-    // 加载index.html文件
-    win.loadFile('dist/renderer/index.html');
+    // 加载文件
+    if (process.env.NODE_ENV === 'development') {
+        console.log(process.env.NODE_ENV);
+        win.loadURL(DEV_SERVER);
+    } else {
+        win.loadFile('dist/renderer/index.html');
+    }
+
 }
 
 app.on('ready', createWindow);

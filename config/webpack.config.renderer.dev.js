@@ -14,7 +14,7 @@ const OUTPUT_PATH = path.resolve(__dirname, '../app', 'dist', 'renderer');
 
 module.exports = {
     mode: 'development',
-    target: 'electron-renderer',
+    target: 'web',                     // 不能为electron-renderer 否则会web版会出错
     // 构建代码映射源码，用于查错
     devtool: 'inline-source-map',
     // entry: './index.jsx',
