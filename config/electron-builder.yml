@@ -36,7 +36,7 @@ win:
     - "x64"
 
 extraResources: 
-  from: "assets/"
+  from: "app/assets/"
   to: "./"
   filter: 
     - "!.svn/**"

@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 const OUTPUT_PATH = path.resolve(__dirname, '../app', 'dist', 'main');
 
 module.exports = {
@@ -41,6 +43,13 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             $dirname: '__dirname',
+        }),
+        new UglifyJsPlugin({
+            test: /\.js($|\?)/i,
+            exclude: /(public)/,
+            parallel: true,             // 默认为os.cpus().length - 1， 可以自己设置数字
+            // 生产环境不应开启sourceMap
+            // sourceMap: true,
         }),
     ],
 };

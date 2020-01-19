@@ -91,13 +91,14 @@ module.exports = {
 
         new CleanWebpackPlugin(),
 
-        new UglifyJsPlugin({
-            test: /\.js($|\?)/i,
-            exclude: /(public)/,
-            parallel: true,             // 默认为os.cpus().length - 1， 可以自己设置数字
-            // 生产环境不应开启sourceMap
-            // sourceMap: true,
-        }),
+        // 开发环境不压缩，减少热更新时间
+        // new UglifyJsPlugin({
+        //     test: /\.js($|\?)/i,
+        //     exclude: /(public)/,
+        //     parallel: true,             // 默认为os.cpus().length - 1， 可以自己设置数字
+        //     // 生产环境不应开启sourceMap
+        //     // sourceMap: true,
+        // }),
 
         new webpack.DefinePlugin({
             MOUNT_NODE_ID: JSON.stringify('root'),
