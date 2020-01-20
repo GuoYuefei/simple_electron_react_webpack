@@ -8,6 +8,10 @@ const OUTPUT_PATH = path.resolve(__dirname, '../app', 'dist', 'main');
 module.exports = {
     mode: 'production',
     target: 'electron-main',
+    node: {
+        __dirname: false,
+        __filename: false,
+    },
     entry: {
         main: './src/main/index.js',
     },
